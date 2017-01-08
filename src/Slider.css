@@ -1,15 +1,18 @@
-.handle {
-  position: 'absolute',
-  transform: 'translate(-50%, -50%)',
-  cursor: 'pointer',
-  padding: '2px',
-  border: '2px solid #abe2fb',
-  borderRadius: '3px',
-  background: '#fff',
-  fontSize: '14px',
-  textAlign: 'center',
+.slider{
+  width: auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
-.handleContainer {
-  width: 400,
-  margin: 50
+.sliderCenter {
+
+  width: 1000px;
+}
+.minMax {
+  margin-top: 30px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }

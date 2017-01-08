@@ -1,34 +1,10 @@
 require('rc-slider/assets/index.css');
 import React, { Component } from 'react';
 import Slider from 'rc-slider';
-
-// const wrapperStyle = { width: 400, margin: 50 };
-
-// const handleStyle = {
-//   position: 'absolute',
-//   transform: 'translate(-50%, -50%)',
-//   cursor: 'pointer',
-//   padding: '2px',
-//   border: '2px solid #abe2fb',
-//   borderRadius: '3px',
-//   background: '#fff',
-//   fontSize: '14px',
-//   textAlign: 'center',
-// };
-
-const CustomHandle = React.createClass({
-  propTypes: {
-    value: React.PropTypes.any,
-    offset: React.PropTypes.number,
-  },
-  render() {
-    const props = this.props;
-    // const style = Object.assign({ left: `${props.offset}%` }, handleStyle);
-    return (
-        <div className="handle">{props.value}</div>
-    );
-  },
-});
+import CustomHandle from './CustomHandle';
+import NumberFormat from 'react-number-format';
+import './Slider.css';
+import { Col, Row, Grid } from 'react-bootstrap';
 
 class SliderComponent extends Component {
   constructor(props) {
@@ -76,11 +52,19 @@ class SliderComponent extends Component {
 
   render() {
     return (
-      <div className="Slider">
-        <Slider step={this.state.step} value={this.state.currentLoan}
-          onChange={this.slide} min={this.state.minLoan} max={this.state.maxLoan}
-          handle={<CustomHandle />}
-         />
+      <div className="SliderContainer">
+        <div className="slider">
+          <div className="sliderCenter">
+            <Slider step={this.state.step} value={this.state.currentLoan}
+              onChange={this.slide} min={this.state.minLoan} max={this.state.maxLoan}
+              handle={<CustomHandle />}
+            />
+          </div>
+          <div className="minMax">
+            <div> $3,000 </div>
+            <div> $35,000 </div>
+          </div>
+        </div>
       </div>
     );
   }
