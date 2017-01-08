@@ -1,0 +1,15 @@
+.handle {
+  position: 'absolute',
+  transform: 'translate(-50%, -50%)',
+  cursor: 'pointer',
+  padding: '2px',
+  border: '2px solid #abe2fb',
+  borderRadius: '3px',
+  background: '#fff',
+  fontSize: '14px',
+  textAlign: 'center',
+}
+.handleContainer {
+  width: 400,
+  margin: 50
+}
