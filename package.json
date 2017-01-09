@@ -6,11 +6,16 @@
     "react-scripts": "0.8.4"
   },
   "dependencies": {
+    "bulma": "^0.3.0",
+    "font-awesome": "^4.7.0",
+    "numeral": "^2.0.4",
     "pui-react-grids": "^7.3.1",
     "rc-slider": "^5.4.3",
+    "re-bulma": "^0.2.3",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2",
+    "react-fontawesome": "^1.5.0",
     "react-intl": "^2.2.2",
     "react-number-format": "^1.0.1"
   },

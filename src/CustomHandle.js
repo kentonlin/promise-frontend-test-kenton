@@ -1,18 +1,20 @@
 require('rc-slider/assets/index.css');
 import React, { Component } from 'react';
 import Slider from 'rc-slider';
-import NumberFormat from 'react-number-format';
+var numeral = require('numeral');
+import './CustomHandle.css';
+// import NumberFormat from 'react-number-format';
 
 const handleStyle = {
   position: 'absolute',
   transform: 'translate(-50%, -50%)',
   cursor: 'pointer',
-  padding: '13px',
-  border: '2px solid grey',
-  borderRadius: '10px',
+  padding: '.7em',
+  border: '.2em solid grey',
+  borderRadius: '.6em',
   background: '#fff',
-  fontSize: '20px',
-  textAlign: 'center',
+  fontSize: '1.4em',
+  textAlign: 'center'
 };
 
 class CustomHandle extends Component {
@@ -20,9 +22,15 @@ class CustomHandle extends Component {
   render() {
     const props = this.props;
     const style = Object.assign({ left: `${props.offset}%` }, handleStyle);
+    const newNumber = numeral(this.props.value).format('0,0')
     return (
-      <NumberFormat style={style} value={props.value} displayType={'text'}
-        thousandSeparator={true} prefix={'$'} />
+      <div style={style}>
+        {/* <span> <i className="fa fa-chevron-left grey left sizing" aria-hidden="true"></i> </span> */}
+        <span>
+        ${newNumber}
+      </span>
+        {/* <span> <i className="fa fa-chevron-right grey right sizing" aria-hidden="true"></i> </span> */}
+      </div>
     );
   }
 }
