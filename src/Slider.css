@@ -1,3 +1,15 @@
+.container {
+  top: 30%;
+}
+.SliderContainer {
+  margin-top: 13em;
+  bottom: 20em;
+  background-color: white;
+  width: 85%;
+  outline: .2em dotted white;
+  outline-offset: 1em;
+}
+
 .marginTop{
   margin-top: 4em;
   width: auto;
@@ -15,11 +27,11 @@
   justify-content: space-between;
 }
 .rc-slider-track {
-  height: 10px;
+  height: .9em;
   color: #269abc;
 }
 .rc-slider-rail {
-  height: 10px;
+  height: .9em;
   border-radius: 10em;
 }
 .widthSeventy {
@@ -68,4 +80,17 @@
 }
 .link {
   color: #31b0d5;
+}
+.alignContainer {
+  margin-top: 2em;
+}
+.alignLeft {
+  text-align: left;
+}
+.dotted {
+  border-top: .1em dotted grey;
+  margin-top: 3em;
+}
+.bottom {
+  margin-bottom: 4em;
 }

@@ -1,6 +1,5 @@
 require('rc-slider/assets/index.css');
 import React, { Component } from 'react';
-import Slider from 'rc-slider';
 var numeral = require('numeral');
 import './CustomHandle.css';
 // import NumberFormat from 'react-number-format';
